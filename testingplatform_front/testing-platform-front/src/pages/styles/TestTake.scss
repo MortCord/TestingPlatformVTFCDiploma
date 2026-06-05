@@ -1,0 +1,155 @@
+$primary: #3b82f6;
+$primary-dark: #2563eb;
+$bg: #f4f7ff;
+$card: #ffffff;
+$text: #1f2937;
+$muted: #6b7280;
+
+.testtake-page {
+  background: $bg;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* LOADING */
+.loading {
+  text-align: center;
+  margin-top: 100px;
+  color: $muted;
+}
+
+/* CARD */
+.testtake-card {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 25px;
+
+  background: $card;
+  border-radius: 14px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border: 1px solid rgba(59,130,246,0.15);
+}
+
+/* PROGRESS */
+.progress {
+  margin-bottom: 20px;
+
+  .bar {
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    margin-top: 8px;
+    overflow: hidden;
+  }
+
+  .fill {
+    height: 100%;
+    background: linear-gradient(90deg, $primary, $primary-dark);
+    transition: 0.3s;
+  }
+}
+
+/* QUESTION */
+.question {
+  margin-bottom: 20px;
+  color: $text;
+}
+
+/* ANSWERS */
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.answer {
+  padding: 10px;
+  border: 1px solid rgba(59,130,246,0.2);
+  border-radius: 10px;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    border-color: $primary;
+    background: rgba(59,130,246,0.05);
+  }
+}
+
+/* OPEN INPUT */
+.open-input {
+  width: 100%;
+  padding: 12px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(59,130,246,0.2);
+
+  outline: none;
+
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 2px rgba(59,130,246,0.15);
+  }
+}
+
+/* ACTIONS */
+.actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+
+    background: $primary;
+    color: white;
+
+    cursor: pointer;
+
+    &:hover {
+      background: $primary-dark;
+    }
+  }
+
+  .finish {
+    background: #22c55e;
+
+    &:hover {
+      background: #16a34a;
+    }
+  }
+}
+
+/* RESULT */
+.result {
+  text-align: center;
+  margin-top: 80px;
+
+  h1 {
+    color: $text;
+  }
+
+  .score {
+    font-size: 50px;
+    font-weight: bold;
+    color: $primary;
+    margin: 20px 0;
+  }
+
+  button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+
+    background: $primary;
+    color: white;
+    cursor: pointer;
+  }
+}

@@ -24,12 +24,29 @@ public class TestController {
 
     @GetMapping
     public List<Test> getAll(){
-        return testService.getAllTests();
+        return testService.getPublicTests();
     }
 
     @GetMapping("/teacher/{teacherId}")
     public List<Test> getByTeacher(@PathVariable Long teacherId){
         return testService.getByTeacher(teacherId);
     }
+
+    @GetMapping("/subject/{subject}")
+    public List<Test> getBySubject(@PathVariable String subject){
+        return testService.getBySubject(subject);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteTest(@PathVariable Long id) {
+        testService.deleteTest(id);
+    }
+
+    @PostMapping("/join")
+    public Test joinByCode(@RequestParam String code){
+        return testService.joinByCode(code);
+    }
+
+
 
 }

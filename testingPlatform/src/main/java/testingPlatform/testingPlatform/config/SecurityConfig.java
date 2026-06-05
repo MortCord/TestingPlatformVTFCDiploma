@@ -4,6 +4,7 @@ package testingPlatform.testingPlatform.config;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -27,13 +28,18 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable()).
                 authorizeHttpRequests(auth -> auth.requestMatchers("/auth/**").permitAll()
                         .requestMatchers("/tests/teacher/**").hasAnyRole("TEACHER", "ADMIN")
-                        .requestMatchers("/tests").hasAnyRole("STUDENT", "TEACHER", "ADMIN")
-                        .requestMatchers("/questions/test/**").hasAnyRole("STUDENT", "TEACHER", "ADMIN")
+                        .requestMatchers("/tests").authenticated()
+                        .requestMatchers("/questions/test/**").authenticated()
                         .requestMatchers("/questions/**").hasAnyRole("TEACHER", "ADMIN")
                         .requestMatchers("/answers/**").hasAnyRole("TEACHER", "ADMIN")
-                        .requestMatchers("/results/submit").hasRole("STUDENT")
-                        .requestMatchers("/results/student/**").hasRole("STUDENT")
+                        .requestMatchers("/results/submit").authenticated()
+                        .requestMatchers("/results/student/**").authenticated()
                         .requestMatchers("/users/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/users/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/users/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/users/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/users/**").hasRole("ADMIN")
+                        .requestMatchers("/uploads/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);

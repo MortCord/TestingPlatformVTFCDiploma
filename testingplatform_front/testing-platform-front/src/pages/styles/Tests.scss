@@ -1,0 +1,104 @@
+$primary: #3b82f6;
+$primary-dark: #2563eb;
+$bg: #f4f7ff;
+$card: #ffffff;
+$text: #1f2937;
+$muted: #6b7280;
+
+/* ROOT */
+.tests-page {
+  background: $bg;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* WRAPPER */
+.tests-container {
+  padding: 24px;
+  color: $text;
+}
+
+/* TITLE */
+.tests-container h1 {
+  margin-bottom: 10px;
+}
+
+/* SEARCH INFO */
+.search-info {
+  color: $muted;
+  margin-bottom: 15px;
+}
+
+/* FILTER */
+.filters {
+  margin-bottom: 20px;
+
+  select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+  }
+}
+
+/* ⭐ IMPORTANT FIX: GRID GAP */
+.tests-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* 👈 FIX: spacing between cards */
+}
+
+/* CARD */
+.test-card {
+  width: 280px;
+  background: $card;
+  border-radius: 12px;
+  padding: 16px;
+
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* 👈 spacing inside card */
+
+  transition: 0.2s;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: $primary;
+  }
+
+  h3 {
+    margin: 0;
+    color: $primary-dark;
+  }
+
+  p {
+    margin: 0;
+    color: $muted;
+    font-size: 14px;
+  }
+
+  button {
+    margin-top: 10px; /* 👈 FIX */
+    padding: 8px 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: $primary;
+    color: white;
+
+    cursor: pointer;
+
+    &:hover {
+      background: $primary-dark;
+    }
+  }
+}
+
+/* EMPTY */
+.empty {
+  color: $muted;
+}

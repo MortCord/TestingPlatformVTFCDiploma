@@ -36,4 +36,6 @@ public class Question {
     private List<Answer> answers;
 
     private String correctTextAnswer;
+
+    private String imageUrl;
 }

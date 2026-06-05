@@ -10,6 +10,7 @@ const parseJwt = (token) => {
 export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const navigate = useNavigate();
 
   const handleRegister = async () => {
@@ -30,23 +31,45 @@ export default function Register() {
 
       if (role === "ADMIN") navigate("/admin");
       else if (role === "TEACHER") navigate("/teacher");
-      else navigate("/tests"); // STUDENT
-
+      else navigate("/tests");
     } catch (err) {
-      alert("Register error");
+      alert("Помилка");
     }
   };
 
   return (
-    <div>
-      <h2>Register</h2>
-      <input placeholder="email" onChange={(e) => setEmail(e.target.value)} />
-      <input
-        placeholder="password"
-        type="password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleRegister}>Register</button>
+    <div className="container-ui" style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "100vh" }}>
+
+      <div className="card-ui" style={{ width: 360 }}>
+
+        <h2 style={{ marginBottom: 5 }}>Створити обліковий запис</h2>
+        <p style={{ marginBottom: 15, color: "#6b7280" }}>
+          Приєднатися до Testikify
+        </p>
+
+        <input
+          className="input-ui"
+          placeholder="Електронна пошта"
+          onChange={(e) => setEmail(e.target.value)}
+        />
+
+        <input
+          className="input-ui"
+          type="password"
+          placeholder="Пароль"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+
+        <button
+          className="btn-ui btn-primary"
+          style={{ width: "100%" }}
+          onClick={handleRegister}
+        >
+          Стоврити обліковий запис
+        </button>
+
+      </div>
+
     </div>
   );
 }

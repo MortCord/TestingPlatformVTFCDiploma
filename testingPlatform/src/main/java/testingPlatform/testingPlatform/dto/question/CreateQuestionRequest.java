@@ -10,4 +10,5 @@ public class CreateQuestionRequest {
     private QuestionType type;
     private Long testId;
     private String correctAnswer;
+    private String imageUrl;
 }

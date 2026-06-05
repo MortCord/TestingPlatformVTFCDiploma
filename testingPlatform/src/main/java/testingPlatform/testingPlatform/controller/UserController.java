@@ -39,7 +39,12 @@ public class UserController {
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id){
-        userRepository.deleteById(id);
+        userService.deleteUser(id);
+    }
+
+    @PutMapping("/{id}")
+    public User updateUser(@PathVariable Long id, @RequestBody CreateUserRequest request) {
+        return userService.updateUser(id, request);
     }
 
 }

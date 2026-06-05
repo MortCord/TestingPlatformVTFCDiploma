@@ -87,4 +87,9 @@ public class ResultService {
 
     }
 
+
+    public List<Result> getResultsByTest(Long testId){
+        return resultRepository.findByTestId(testId);
+    }
+
 }

@@ -8,6 +8,7 @@ import AdminPanel from "../pages/AdminPanel";
 import Home from "../pages/Home";
 import TeacherPanel from "../pages/TeacherPanel";
 import TestTake from "../pages/TestTake";
+import JoinTest from "../pages/JoinTest";
 
 export default function AppRouter() {
   return (
@@ -62,6 +63,9 @@ export default function AppRouter() {
   }
 />
 <Route path="/test/:id" element={<TestTake />} />
+
+<Route path="/join-test" element={<JoinTest />}
+/>
       </Routes>
     </BrowserRouter>
   );

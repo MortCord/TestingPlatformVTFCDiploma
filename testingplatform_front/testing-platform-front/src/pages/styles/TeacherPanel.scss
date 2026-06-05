@@ -1,0 +1,144 @@
+$primary: #3b82f6;
+$primary-dark: #2563eb;
+$bg: #f4f7ff;
+$card: #ffffff;
+$text: #1f2937;
+$muted: #6b7280;
+
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: $bg;
+}
+
+/* PAGE */
+.teacher-page {
+  font-family: Arial, sans-serif;
+  color: $text;
+}
+
+/* HEADER FIX (THIS FIXES YOUR ISSUE) */
+.teacher-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: $bg;
+  padding: 10px 20px;
+}
+
+/* CONTENT WRAPPER */
+.teacher-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* HEADINGS */
+h1 {
+  margin: 0 0 10px 0;
+}
+
+h2, h3 {
+  margin: 10px 0;
+}
+
+/* CARD */
+.card {
+  background: $card;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+/* INPUTS */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* BUTTONS (IMPORTANT FIX FOR SPACING) */
+button {
+  background: $primary;
+  color: white;
+  border: none;
+
+  padding: 8px 12px;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  margin: 6px 6px 6px 0; /* 👈 FIX SPACING VERTICAL + HORIZONTAL */
+}
+
+button:hover {
+  background: $primary-dark;
+}
+
+/* TEST GRID */
+.tests-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* TEST CARD */
+.test-card {
+  background: $card;
+  padding: 12px;
+  border-radius: 10px;
+  width: 200px;
+
+  border: 1px solid #eee;
+  cursor: pointer;
+}
+
+.test-card.active {
+  border: 2px solid $primary;
+}
+
+/* ANSWERS */
+.answer-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* LIST */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+
+  margin-bottom: 8px;
+}
+
+/* RESULTS */
+.results-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.result-card {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  width: 220px;
+
+  border-left: 4px solid $primary;
+}

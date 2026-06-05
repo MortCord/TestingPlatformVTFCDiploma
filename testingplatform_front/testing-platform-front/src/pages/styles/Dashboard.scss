@@ -1,0 +1,131 @@
+$primary: #3b82f6;
+$primary-dark: #2563eb;
+$bg: #f4f7ff;
+$card: #ffffff;
+$text: #1f2937;
+$muted: #6b7280;
+
+.dashboard {
+  padding: 24px;
+  background: $bg;
+  min-height: 100vh;
+  color: $text;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.dashboard p {
+  color: $muted;
+  max-width: 700px;
+}
+
+.section-title {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+/* FEATURES GRID */
+.card-grid {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* FEATURE CARD */
+.card {
+  background: $card;
+  border-radius: 12px;
+  padding: 16px;
+  width: 260px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  transition: 0.2s;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: $primary;
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15);
+  }
+
+  h3 {
+    margin-bottom: 8px;
+    color: $primary-dark;
+  }
+
+  p {
+    color: $muted;
+    font-size: 14px;
+  }
+}
+
+/* STATS CARD */
+.stats-card {
+  background: linear-gradient(135deg, $primary, $primary-dark);
+  color: white;
+  padding: 18px;
+  border-radius: 12px;
+  width: 220px;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.25);
+
+  h3 {
+    margin-bottom: 10px;
+  }
+
+  .value {
+    font-size: 26px;
+    font-weight: bold;
+  }
+}
+
+/* TEST GRID */
+.tests-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* TEST CARD (SQUARE) */
+.test-card {
+  background: $card;
+  padding: 18px;
+  border-radius: 12px;
+  width: 220px;
+  height: 140px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+
+  transition: 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: $primary;
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+  }
+
+  h3 {
+    font-size: 16px;
+    color: $primary-dark;
+  }
+
+  .score {
+    font-size: 14px;
+    font-weight: bold;
+    color: $primary;
+  }
+}
+
+ul {
+  color: $muted;
+}

@@ -29,6 +29,11 @@ public class ResultController {
         return resultService.getStudentResults(studentId);
     }
 
+    @GetMapping("/test/{testId}")
+    public List<Result> getByTest(@PathVariable Long testId){
+        return resultService.getResultsByTest(testId);
+    }
+
     @PostMapping("/submit")
     public ResultResponse submit(@RequestBody SubmitTestRequest request){
         return resultService.submitTest(request);
