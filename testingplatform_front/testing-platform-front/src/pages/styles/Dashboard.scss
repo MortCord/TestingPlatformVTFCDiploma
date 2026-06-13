@@ -29,14 +29,14 @@ $muted: #6b7280;
   font-size: 20px;
 }
 
-/* FEATURES GRID */
+
 .card-grid {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
 }
 
-/* FEATURE CARD */
+
 .card {
   background: $card;
   border-radius: 12px;
@@ -63,7 +63,7 @@ $muted: #6b7280;
   }
 }
 
-/* STATS CARD */
+
 .stats-card {
   background: linear-gradient(135deg, $primary, $primary-dark);
   color: white;
@@ -82,7 +82,7 @@ $muted: #6b7280;
   }
 }
 
-/* TEST GRID */
+
 .tests-grid {
   display: flex;
   flex-wrap: wrap;
@@ -90,7 +90,6 @@ $muted: #6b7280;
   margin-top: 10px;
 }
 
-/* TEST CARD (SQUARE) */
 .test-card {
   background: $card;
   padding: 18px;

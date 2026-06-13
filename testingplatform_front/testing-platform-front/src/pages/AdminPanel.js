@@ -71,7 +71,6 @@ export default function AdminPanel() {
 
         <h1>Панель адміна</h1>
 
-        {/* CREATE USER */}
         <div className="card-ui">
           <h3>Створити обліковий запис</h3>
 
@@ -105,7 +104,6 @@ export default function AdminPanel() {
           </button>
         </div>
 
-        {/* USERS */}
         <h2>Користувачі</h2>
 
         <div className="grid-ui">
@@ -129,7 +127,6 @@ export default function AdminPanel() {
           ))}
         </div>
 
-        {/* TESTS */}
         <h2>Тести</h2>
 
         <div className="grid-ui">
@@ -148,7 +145,6 @@ export default function AdminPanel() {
           ))}
         </div>
 
-        {/* MODAL */}
         {editingUser && (
           <div className="modal-overlay">
             <div className="card-ui">

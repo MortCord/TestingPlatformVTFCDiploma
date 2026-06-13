@@ -43,8 +43,7 @@ public class ResultService {
         int score = 0;
 
         for(Question q : questions){
-            AnswerSubmission sub = request.getAnswers().stream().filter(a -> a.getQuestionId().equals(q.getId())).
-                    findFirst().orElse(null);
+            AnswerSubmission sub = request.getAnswers().stream().filter(a -> a.getQuestionId().equals(q.getId())).findFirst().orElse(null);
 
             if(sub == null){
                 continue;
@@ -74,9 +73,6 @@ public class ResultService {
                     if(q.getCorrectTextAnswer().equalsIgnoreCase(sub.getTextAnswer())){
                         score++;
                     }
-                    break;
-                case MATCHING:
-                    //todo
                     break;
             }
         }

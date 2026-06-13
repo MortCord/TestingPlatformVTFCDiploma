@@ -40,16 +40,12 @@ export default function Dashboard() {
         <p style={{ color: "var(--muted)", marginBottom: 20 }}>
           Відстежуйте свій прогрес у навчанні та результати тестів.
         </p>
-
-        {/* STATS */}
         <div className="card-ui" style={{ marginBottom: 20 }}>
           <h3>Середній бал</h3>
           <div style={{ fontSize: 32, fontWeight: "bold", color: "var(--primary)" }}>
             {averageScore}
           </div>
         </div>
-
-        {/* RESULTS */}
         <h2 style={{ marginBottom: 10 }}>Ваші тести</h2>
 
         {results.length === 0 ? (
@@ -69,7 +65,6 @@ export default function Dashboard() {
           </div>
         )}
 
-        {/* FEATURES */}
         <h2 style={{ marginTop: 30 }}>Функції платформи</h2>
 
         <div className="grid-ui">

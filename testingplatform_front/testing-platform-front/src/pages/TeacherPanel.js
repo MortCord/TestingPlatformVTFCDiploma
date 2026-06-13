@@ -145,7 +145,6 @@ const addQuestion = async () => {
 
         <h1>Панель вчителя</h1>
 
-        {/* CREATE TEST */}
         <div className="card-ui card-hover">
           <h3>Створити тест</h3>
 
@@ -193,8 +192,6 @@ const addQuestion = async () => {
           </button>
         </div>
 
-        {/* TESTS */}
-{/* TESTS */}
 <div className="grid-ui" style={{ marginTop: 20 }}>
   {tests.map((t) => (
     <div
@@ -247,7 +244,6 @@ const addQuestion = async () => {
   ))}
 </div>
 
-        {/* QUESTIONS */}
         {selectedTest && (
           <div className="card-ui" style={{ marginTop: 20 }}>
             <h3>Питання</h3>
@@ -272,8 +268,6 @@ const addQuestion = async () => {
             ))}
           </div>
         )}
-
-        {/* ADD QUESTION */}
         {selectedTest && (
           <div className="card-ui card-hover" style={{ marginTop: 20 }}>
             <h3>Додати питання</h3>
@@ -345,8 +339,6 @@ const addQuestion = async () => {
             </button>
           </div>
         )}
-
-        {/* RESULTS */}
         {selectedTest && (
           <div className="grid-ui" style={{ marginTop: 20 }}>
             {results.map((r) => (

@@ -111,7 +111,6 @@ const submitTest = async () => {
               Питання {currentIndex + 1} / {questions.length}
             </div>
 
-            {/* PROGRESS */}
             <div
               style={{
                 height: "10px",
@@ -134,7 +133,6 @@ const submitTest = async () => {
               {currentQuestion.content}
             </h3>
 
-            {/* IMAGE */}
 {currentQuestion.imageUrl && (
   <img
     src={`http://localhost:8080${currentQuestion.imageUrl}`}
@@ -147,7 +145,6 @@ const submitTest = async () => {
   />
 )}
 
-            {/* SINGLE */}
             {currentQuestion.type === "SINGLE_CHOICE" &&
               currentQuestion.answers?.map((a) => (
                 <label key={a.id} style={{ display: "block", marginBottom: 8 }}>
@@ -162,7 +159,6 @@ const submitTest = async () => {
                 </label>
               ))}
 
-            {/* MULTI */}
             {currentQuestion.type === "MULTIPLE_CHOICES" &&
               currentQuestion.answers?.map((a) => (
                 <label key={a.id} style={{ display: "block", marginBottom: 8 }}>
@@ -176,7 +172,6 @@ const submitTest = async () => {
                 </label>
               ))}
 
-            {/* OPEN */}
             {currentQuestion.type === "OPEN_ANSWER" && (
               <input
                 className="input-ui"
@@ -187,7 +182,6 @@ const submitTest = async () => {
               />
             )}
 
-            {/* ACTIONS */}
             <div
               style={{
                 display: "flex",
@@ -210,7 +204,6 @@ const submitTest = async () => {
           </div>
         )}
 
-        {/* RESULT */}
         {result && (
           <div className="card-ui" style={{ textAlign: "center", marginTop: 40 }}>
             <h1>Ваша оцінка</h1>

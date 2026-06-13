@@ -50,7 +50,6 @@ export default function Tests() {
           Доступні тести
         </h1>
 
-        {/* FILTER */}
         <div style={{ marginBottom: 20 }}>
           <select
             className="select-ui"
@@ -67,7 +66,6 @@ export default function Tests() {
           </select>
         </div>
 
-        {/* GRID */}
         <div className="grid-ui">
 
           {filteredTests.map((t) => (
