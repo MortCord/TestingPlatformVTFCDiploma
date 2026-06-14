@@ -1,5 +1,5 @@
 Hi there!
-Welcome to my diploma project for <b>Vinnitsia Techincal College<b/>. Project's name is Testikify -- a platform for creating and taking tests.
+Welcome to my diploma project for Vinnitsia Techincal College. Project's name is Testikify -- a platform for creating and taking tests.
 
 --Features--
 The platform includes:
