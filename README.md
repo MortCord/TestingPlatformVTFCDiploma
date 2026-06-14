@@ -4,12 +4,19 @@ Welcome to my diploma project for Vinnitsia Techincal College. Project's name is
 --Features--
 
 The platform includes:
+
 -Three different roles: Admin, Teacher and Student
+
 -Authentication and authorization
+
 -Test creation and test-taking functionality
+
 -Basic analitics on dashboard page
+
 -Private tests that can be accessed using a code
+
 -Support for images in questions
+
 -Separate permissions and limitations for each role (e.g., Admin Panel and Teacher Panel)
 
 --Technologies--
@@ -17,20 +24,31 @@ The platform includes:
 Project uses client-server architecture, with Spring Boot for the backend, React for the frontend and MySQL as the database.
 
 Backend:
+
 -Java
+
 -Spring Boot
+
 -Spring Security
+
 -JWT
+
 -Lombok
 
 Frontend:
+
 -JavaScript
+
 -React
+
 -React Router DOM
+
 -Axios
 
 Development Tools:
+
 -IntelliJ IDEA
+
 -VS Code
 
 --Documentation--
