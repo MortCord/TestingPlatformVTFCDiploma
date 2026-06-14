@@ -2,6 +2,7 @@ Hi there!
 Welcome to my diploma project for Vinnitsia Techincal College. Project's name is Testikify -- a platform for creating and taking tests.
 
 --Features--
+
 The platform includes:
 -Three different roles: Admin, Teacher and Student
 -Authentication and authorization
